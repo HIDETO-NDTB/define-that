@@ -1,0 +1,101 @@
+/* 共通 */
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+div.bottom-menu {
+    float: left;
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    padding: 12px;
+    border-top: 1px solid rgb(223, 86, 86);;
+    border-bottom: 1px solid rgb(223, 86, 86);;
+}
+div.bottom-menu a{
+    color: rgb(223, 86, 86);
+}
+div.bottom-menu img{
+    margin-right: 3px;
+}
+
+/* index.blade */
+
+div.card-header.title {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+div.card-body.content {
+    padding: 15px 10px 5px 10px;
+}
+div.card-body.content h5 {
+    font-size: 14px;
+}
+div.card-body.content span {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+    border: 1px solid #B3BEF8;
+}
+div.card-body.content h6 {
+    color: gray;
+    margin-top: 10px;
+}
+img.good {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+div.card.index {
+    margin-bottom: 5px;
+}
+
+/* navbar.blade */
+
+nav.navbar.navbar-light.shadow-sm {
+    background-color: #B3BEF8;
+}
+
+/* footer.blade */
+
+#copyrights {
+    background-color: #676768;
+    color: white;
+    text-align: center;
+    height: 40px;
+    padding: 5px 0;
+    margin-bottom: 40px;
+}
+
+/* rejister.blade */
+
+div.card.register {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+button.btn.btn-register{
+    background-color: #B3BEF8;
+    width: 160px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* initiative.blade */
+
+div.container h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* login.blade */
+
+div.card.login {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a.btn.btn-link {
+    padding-left: 0;
+}
