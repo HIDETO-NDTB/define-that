@@ -27,16 +27,20 @@ div.card-header.title {
     padding: 5px 10px;
     font-size: 16px;
 }
+div.card-header.title span{
+    margin-left: 10px;
+}
 div.card-body.content {
     padding: 15px 10px 5px 10px;
 }
 div.card-body.content h5 {
     font-size: 14px;
+    line-height: 1.8;
 }
 div.card-body.content span {
     margin-left: 5px;
     margin-right: 5px;
-    padding: 2px;
+    padding: 0 2px;
     border: 1px solid #B3BEF8;
 }
 div.card-body.content h6 {
@@ -48,7 +52,14 @@ img.good {
     height: 20px;
     float: right;
 }
+img.share {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-left: 15px;
+}
 div.card.index {
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
@@ -56,6 +67,9 @@ div.card.index {
 
 nav.navbar.navbar-light.shadow-sm {
     background-color: #B3BEF8;
+}
+div.dropdown-menu.dropdown-menu-right.show {
+    width: 50%;
 }
 
 /* footer.blade */
@@ -69,7 +83,7 @@ nav.navbar.navbar-light.shadow-sm {
     margin-bottom: 40px;
 }
 
-/* rejister.blade */
+/* register.blade */
 
 div.card.register {
     margin-top: 20px;
@@ -95,7 +109,39 @@ div.card.login {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 a.btn.btn-link {
     padding-left: 0;
+}
+
+/* mypage.blade */
+
+div.userpage {
+    margin: 15px 10px;
+}
+h3.username {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+a.editbtn {
+    padding: 3px 10px;
+    border: 1px solid rgb(223, 86, 86);;
+    background-color: white;
+}
+img.editimg {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width:320px){
+    div.bottom-menu {
+        font-size: 14px;
+        height: 60px;
+    }
+    #copyrights {
+        margin-bottom: 50px;
+    }
 }

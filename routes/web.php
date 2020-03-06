@@ -21,6 +21,11 @@ Route::get('/initiative', [
     'as' => 'initiative'
 ]);
 
+Route::get('/mypage/{id}', [
+    'uses' => 'FrontEndController@mypage',
+    'as' => 'mypage'
+]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

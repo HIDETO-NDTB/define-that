@@ -31,9 +31,9 @@
             <select name="" style="width: 150px;">
                 <option value="">だけど</option>
                 <option value="">けど</option>
-                <option value="">だが</option>
+                <option value="">というが</option>
                 <option value="">が、しかし</option>
-                <option value="">だけれども</option>
+                <option value="">ではなく</option>
             </select>
         </div>
         <div class="form-group">
