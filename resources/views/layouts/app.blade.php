@@ -18,8 +18,10 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <!-- Main Stylesheet File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -29,14 +31,14 @@
 
 </head>
 <body>
-    <div id="app">
+    
         
     @include('inc/navbar')
 
         
             @yield('content')
         
-    </div>
+    
 
     @include('inc/footer')
 
@@ -49,6 +51,15 @@
 <!-- Template Main Javascript File -->
 <script src="{{ asset('app/js/main.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    @if (Session::has('success'))
+        toastr.success("{{ Session::get('success')}}")
+    @endif
+    @if (Session::has('warning'))
+        toastr.warning("{{ Session::get('warning')}}")
+    @endif
+  </script>
 
 </body>
 </html>

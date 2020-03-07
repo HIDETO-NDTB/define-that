@@ -26,6 +26,11 @@ Route::get('/mypage/{id}', [
     'as' => 'mypage'
 ]);
 
+Route::post('/store-define',[
+    'uses' => 'DefineController@store',
+    'as' => 'definestore'
+]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

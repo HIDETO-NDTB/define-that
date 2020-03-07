@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h4>投稿</h4>
-    <form action="" method="POST">
+    <form action="{{ route('definestore') }}" method="POST">
     @csrf
         <div class="form-group">
             <label>タイトル（20文字以内）</label>
@@ -18,7 +18,7 @@
         </script>                
         <div class="form-group">
             <label>内容（50文字以内）</label>
-            <textarea name="content" id="textBox2" rows="3" class="form-control" placeholder="内容を入力下さい"></textarea>
+            <textarea name="content1" id="textBox2" rows="3" class="form-control" placeholder="内容を入力下さい"></textarea>
             <div id="count">入力文字数: <span class="showCnt2">0</span></div>
         </div>
         <script>
@@ -28,17 +28,17 @@
             });
         </script>
         <div class="form-group">
-            <select name="" style="width: 150px;">
-                <option value="">だけど</option>
-                <option value="">けど</option>
-                <option value="">というが</option>
-                <option value="">が、しかし</option>
-                <option value="">ではなく</option>
+            <select name="connect_id" style="width: 150px;">
+                <option value="1">だけど</option>
+                <option value="2">けど</option>
+                <option value="3">というが</option>
+                <option value="4">が、しかし</option>
+                <option value="5">ではなく</option>
             </select>
         </div>
         <div class="form-group">
             <label>内容（50文字以内）</label>
-            <textarea name="content" id="textBox3" rows="3" class="form-control" placeholder="内容を入力下さい"></textarea>
+            <textarea name="content2" id="textBox3" rows="3" class="form-control" placeholder="内容を入力下さい"></textarea>
             <div id="count">入力文字数: <span class="showCnt3">0</span></div>
         </div>
         <script>
@@ -47,6 +47,13 @@
             $('.showCnt3').text(cnt);
             });
         </script>
+        @if(Auth::check())
+            <div class="form-group">
+                <button type="submit" class="btndefine">定義発表</button>
+            </div>
+        @else
+            <h5 class="user">定義の発表はユーザー限定です。ログインの上で発議下さい。</h5>
+        @endif
     </form>
 </div>
 @endsection
