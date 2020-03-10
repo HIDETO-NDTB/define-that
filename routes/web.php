@@ -31,6 +31,14 @@ Route::post('/store-define',[
     'as' => 'definestore'
 ]);
 
+Route::group(['middleware'=>'auth'],function(){
+    Route::group(['prefix'=>'defines/{id}'],function(){
+        Route::post('favorite','FavoriteController@store')->name('favorites.favorite');
+        Route::delete('unfavorite','FavoriteController@destroy')->name('favorites.unfavorite');
+    });
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -15,4 +15,9 @@ class Define extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
+    
+    public function favorite_users()
+    {
+        return $this->belongsToMany(User::class,'define_user','define_id','user_id')->withTimestamps();
+    }
 }

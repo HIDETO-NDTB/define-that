@@ -37,7 +37,41 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function defines(){
+    public function defines() {
         return $this->hasMany('App\Define');
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(Define::class, 'define_user', 'user_id', 'define_id')->withTimestamps();
+    }
+
+    public function favorite($defineId)
+    {
+        $exist = $this->is_favorite($defineId);
+
+        if($exist){
+            return false;
+        }else{
+            $this->favorites()->attach($defineId);
+            return true;
+        }
+    }
+
+    public function unfavorite($defineId)
+    {
+        $exist = $this->is_favorite($defineId);
+
+        if($exist){
+            $this->favorites()->detach($defineId);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function is_favorite($defineId)
+    {
+        return $this->favorites()->where('define_id',$defineId)->exists();
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateConnectsTable extends Migration
+class CreateDefineUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateConnectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('connects', function (Blueprint $table) {
+        Schema::create('define_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
+            $table->integer('define_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateConnectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('connects');
+        Schema::dropIfExists('define_user');
     }
 }

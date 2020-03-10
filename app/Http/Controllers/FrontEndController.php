@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Define;
 use App\Connect;
+use App\Favorite;
 
 class FrontEndController extends Controller
 {
@@ -18,6 +19,7 @@ class FrontEndController extends Controller
         return view('index')->with('defines',$defines)
                             ->with('connects',Connect::all())
                             ->with('users',User::all());
+
     }
 
     public function initiative(){
