@@ -128,6 +128,13 @@ h5.user {
     margin-bottom: 30px;
 }
 
+input#textBox{
+    width: 60%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    height: 40px;
+}
+
 /* login.blade */
 
 div.card.login {
@@ -158,6 +165,18 @@ img.editimg {
     width: 20px;
     height: 20px;
 }
+h5.notinitiative {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* legend.blade */
+h5.notlegend {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 /* レスポンシブ */
 
@@ -168,5 +187,11 @@ img.editimg {
     }
     #copyrights {
         margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width:1600px){
+    label{
+        margin-right: 300px;
     }
 }

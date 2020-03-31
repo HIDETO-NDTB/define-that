@@ -16,6 +16,16 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
+Route::get('/popular', [
+    'uses' => 'FrontEndController@popular',
+    'as' => 'popular'
+]);
+
+Route::get('/legend', [
+    'uses' => 'FrontEndController@legend',
+    'as' => 'legend'
+]);
+
 Route::get('/initiative', [
     'uses' => 'FrontEndController@initiative',
     'as' => 'initiative'
