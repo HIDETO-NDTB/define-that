@@ -30,7 +30,7 @@
                             <a class="dropdown-item" href="{{ route('mypage',['id' =>Auth::user()->id]) }}">
                                 {{ __('マイページ') }}
                             </a>
-                            <a class="dropdown-item" href="">
+                            <a class="dropdown-item" href="{{ route('contact') }}">
                                 {{ __('お問い合わせ') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"

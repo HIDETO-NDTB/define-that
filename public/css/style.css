@@ -192,6 +192,21 @@ h5.notlegend {
     margin-bottom: 30px;
 }
 
+/* contact.blade */
+h3.contact {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+button.btnContact {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #B3BEF8;
+    color: black;
+    margin-bottom: 10px; 
+}
+
 /* レスポンシブ */
 
 @media screen and (max-width:320px){

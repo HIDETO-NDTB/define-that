@@ -41,6 +41,11 @@ Route::get('/mypage/{id}', [
     'as' => 'mypage'
 ]);
 
+Route::get('/contact', [
+    'uses' => 'FrontEndController@contact',
+    'as' => 'contact'
+]);
+
 Route::post('/store-define',[
     'uses' => 'DefineController@store',
     'as' => 'definestore'
@@ -49,6 +54,11 @@ Route::post('/store-define',[
 Route::delete('/delete-define/{define}',[
     'uses' => 'DefineController@delete',
     'as' => 'definedelete'
+]);
+
+Route::post('/store-contact',[
+    'uses' => 'ContactController@store',
+    'as' => 'contactstore'
 ]);
 
 Route::group(['middleware'=>'auth'],function(){

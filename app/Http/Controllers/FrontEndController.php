@@ -57,6 +57,13 @@ class FrontEndController extends Controller
 
     }
 
+    public function contact(){
+        $users = User::all();
+
+        return view('contact')->with('users',User::all()); 
+
+    }
+
     public function initiative(){
         return view('initiative');
     }
