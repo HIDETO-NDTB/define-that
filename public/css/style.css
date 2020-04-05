@@ -22,10 +22,15 @@ div.bottom-menu img{
 }
 
 /* index.blade */
-
+div.card-header.titleEx {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ECB2F7;
+}
 div.card-header.title {
     padding: 5px 10px;
     font-size: 16px;
+    background-color: #B3BEF8;
 }
 div.card-header.title span{
     margin-left: 10px;
@@ -171,6 +176,15 @@ h5.notinitiative {
     margin-bottom: 30px;
 }
 
+button.btndelete {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #B3BEF8;
+    color: black;
+    float: right;
+    margin-bottom: 10px;
+}
+
 /* legend.blade */
 h5.notlegend {
     font-size: 16px;
@@ -190,8 +204,8 @@ h5.notlegend {
     }
 }
 
-@media screen and (min-width:1600px){
-    label{
+@media screen and (min-width:1500px){
+    label#title{
         margin-right: 300px;
     }
 }

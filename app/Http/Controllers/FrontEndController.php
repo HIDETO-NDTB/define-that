@@ -33,6 +33,17 @@ class FrontEndController extends Controller
 
     }
 
+    public function created(){
+        $defines = Define::orderBy('created_at','desc')->get();
+        $connects = Connect::all();
+        $users = User::all();
+
+        return view('created')->with('defines',$defines)
+                              ->with('connects',Connect::all())
+                              ->with('users',User::all());
+
+    }
+
     public function legend(){
         $legendDefines = Define::withCount('favorite_users')->orderBy('favorite_users_count','desc')->get();
         $legendDefinesCount = Define::withCount('favorite_users')->orderBy('favorite_users_count','desc')->first();
@@ -51,10 +62,12 @@ class FrontEndController extends Controller
     }
 
     public function mypage($id){
+        $defines = Define::all();
         $userdefines  = Define::orderBy('created_at','desc')->where('user_id',$id)->get();
         $userdefinesCount  = Define::orderBy('created_at','desc')->where('user_id',$id)->count();
 
-        return view('mypage')->with('userdefines',$userdefines)
+        return view('mypage')->with('defines',$defines)
+                             ->with('userdefines',$userdefines)
                              ->with('userdefinesCount',$userdefinesCount);
     }
 }

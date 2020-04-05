@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="userpage">
-        <h3 class="username">{{ Auth::user()->name }}</h3>
+        <h3 class="username">{{ Auth::user()->name }} さんのページ</h3>
     </div>
     @if($userdefinesCount>0)
     @foreach($userdefines as $userdefine)
@@ -14,6 +14,13 @@
             <h6>{{ $userdefine->user->name }}</h6>
             <h5 class="favorites">いいね！ {{ $userdefine->favorite_users->count() }}</h5>      
         </div>
+        <form action="{{ route('definedelete',['id'=>$userdefine->id]) }}" method="POST">
+        @csrf
+        @method('DELETE')
+            <div class="card-body content">
+                <button type="submit" class="btndelete">定義削除</button>
+            </div>
+        </form>
     </div>
     @endforeach
     @else

@@ -21,6 +21,11 @@ Route::get('/popular', [
     'as' => 'popular'
 ]);
 
+Route::get('/created', [
+    'uses' => 'FrontEndController@created',
+    'as' => 'created'
+]);
+
 Route::get('/legend', [
     'uses' => 'FrontEndController@legend',
     'as' => 'legend'
@@ -39,6 +44,11 @@ Route::get('/mypage/{id}', [
 Route::post('/store-define',[
     'uses' => 'DefineController@store',
     'as' => 'definestore'
+]);
+
+Route::delete('/delete-define/{define}',[
+    'uses' => 'DefineController@delete',
+    'as' => 'definedelete'
 ]);
 
 Route::group(['middleware'=>'auth'],function(){

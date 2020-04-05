@@ -14,7 +14,7 @@
         <a href="{{ route('popular') }}"><img src="{{ secure_asset('app/img/hot.png') }}">人気順</a>
     </div>
     <div class="bottom-menu">
-        <a href="{{ route('index') }}"><img src="{{ secure_asset('app/img/poplar.png') }}">投稿順</a>
+        <a href="{{ route('created') }}"><img src="{{ secure_asset('app/img/poplar.png') }}">投稿順</a>
     </div>
     <div class="bottom-menu">
         <a href="{{ route('legend') }}"><img src="{{ secure_asset('app/img/king.png') }}">殿堂入り</a>

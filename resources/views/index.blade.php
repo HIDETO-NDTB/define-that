@@ -1,6 +1,21 @@
 @extends('layouts.app')
 @section('content')
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card index">
+                <div class="card-header titleEx">◯◯の定義<span>の定義</span></div>
+                <div class="card-body content">
+                    <h5>◯◯の定義を見て暇潰しすることは誰にでもできるし一人でも多くの方に見て欲しい<span>けど</span>できれば会員登録して投稿や「いいね」も押して欲しい。踊る暇人に見る暇人、同じ暇なら・・</h5>
+                    <h6>◯◯の定義 管理者</h6>
+                    <h5 class="favorites">いいね！ 10000</h5>                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @foreach($defines as $define)
 <div class="container">
     <div class="row justify-content-center">

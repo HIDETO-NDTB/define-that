@@ -6,7 +6,7 @@
     <form action="{{ route('definestore') }}" method="POST">
     @csrf
         <div class="form-group">
-            <label>タイトル（20文字以内）</label>
+            <label id="title">タイトル（20文字以内）</label>
             <input type="text" name="title" id="textBox" placeholder="タイトルを入力下さい" value="">
             <span>の定義</span>
             <div id="count">入力文字数: <span class="showCnt">0</span></div>

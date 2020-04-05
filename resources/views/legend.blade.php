@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card index">
-                <div class="card-header title">殿堂入り<span>の定義</span></div>
+                <div class="card-header titleEx">殿堂入り<span>の定義</span></div>
                 <div class="card-body content">
                     <h5>感動でもお笑いでも真面目でも文学的でも何でもイイ<span>けど</span>いいねが100件以上の定義</h5>
                     <h6>◯◯の定義 管理者</h6>

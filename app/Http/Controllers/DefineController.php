@@ -57,7 +57,7 @@ class DefineController extends Controller
         $define->save();
 
         Session::flash('success','定義が発表されました');
-        return redirect()->route('initiative');
+        return redirect()->route('created');
     }
 
     /**
@@ -100,8 +100,11 @@ class DefineController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Define $define)
     {
-        //
+        $define->delete();
+
+        Session::flash('success','定義が削除されました');
+        return redirect()->back();
     }
 }
