@@ -29,13 +29,13 @@
                     
                         @if((Auth::check())&&($popularDefine->user_id!=Auth::user()->id))
                             @if (Auth::user()->is_favorite($popularDefine->id))
-                            <form action="" method="POST">
+                            <form action="{{ route('favorites.unfavorite',['id'=>$popularDefine->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                                 <button class="good" type="submit"><img class="good" src="{{ secure_asset('app/img/good.png') }}">取消し</button>
                             </form>
                             @else
-                            <form action="" method="POST">
+                            <form action="{{ route('favorites.favorite',['id'=>$popularDefine->id]) }}" method="POST">
                             @csrf
                                 <button class="good" type="submit"><img class="good" src="{{ secure_asset('app/img/good.png') }}">いいね！</button>
                             </form>
