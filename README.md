@@ -8,7 +8,7 @@
 <img width="1145" alt="MakeDefinition" src="https://user-images.githubusercontent.com/57483907/79682496-d415f680-825d-11ea-8efe-0cf92e1e9683.png">
 
 #### Features: The website ultimate killing time
-#### Requirement: PHP7.3.13 Laravel5.8 MySQL5.7.28 
+#### Requirement: PHP7.3.13 Laravel5.8 MySQL5.7.28 AWS-EC2
 #### Usage: 
 ##### 1.Make your own definition
 ##### 2.Other people can give good, if they like 
